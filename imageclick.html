@@ -1,0 +1,68 @@
+<html>
+<head>
+	<script src="./inc/ajax.js"></script>
+	<script type="text/javascript">
+		function popup() {
+			alert("Hello World");
+		}
+		
+		var myReq;
+		
+		
+		
+		function goAjax(){
+			var elem = document.getElementById("loginId")
+			var loginId = elem.value
+			
+			
+			if (loginId == ""){
+				alert("You Need to enter a loginID");
+				elem.focus();
+				return false;
+			}
+			
+			if (!(loginId.match(/^[0-9]+$/))) {
+				alert("Login IDs are only numbers");
+				elem.focus();
+				return false;
+			}
+			
+			myReq = getRequest();
+			myReq.onreadystatechange = myCallBack;
+				/*{
+				if (myReq.readyState == 4) {
+					document.getElementById("uname").innerHTML = myReq.responseText;
+				}
+			}*/
+			myReq.open("GET","./inc/data.php?loginId=" + elem.value,true);
+			myReq.send(null);
+		}
+		
+		function myCallBack() {
+			if (myReq.readyState == 4) {
+				document.getElementById("uname").innerHTML = myReq.responseText;
+			}
+		}
+		
+		function showMessage(){
+			document.getElementById('msg').style.display = "";
+		}
+		
+		
+	</script>
+	
+	
+	
+	<style type="text/css">
+		img:hover {cursor: pointer;}
+	</style>
+	
+</head>
+<body>
+	<img src="img/b_drop.png" onClick="popup()" />
+	Login ID: <input type="text" id="loginId" length=10 />
+	<input type="button" value="Who's There?" onClick="showMessage()" /><br/>
+	User Name: <span id="uname"></span><br/>
+	<span id="msg" style="display:none">Hello Word</span>
+</body>
+</html>

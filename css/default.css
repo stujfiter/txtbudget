@@ -1,0 +1,50 @@
+tr.header { background-color: #335d7e;
+			color: white;
+			font-size: 12; }
+tr.highlight { background-color: #F0F0F0; }
+
+tr { font-size: 12;
+	 color: black;
+	 background: white; 
+	 /*font-weight: bold;*/}
+
+td { font-size: 16; 
+	 /*font-weight: bold;*/ }
+
+body { font-family: Tahoma; 
+	   font-size: 14;
+	   /* font-weight: bold; */
+	   color: black;
+	   /*background-color: #C1ECF1;*/ }
+
+table { border-collapse: collapse; }
+
+.login { position: absolute;
+		 top: 10;
+		 right: 20; }
+		 
+.menu { position: absolute;
+		top: 10;
+		left: 20; 
+		/*background-color: #335d7e;*/
+		padding: 5px; }
+		
+div.tablediv { width: 700px;
+	margin-right: auto;
+	margin-left: auto; }
+	
+#ops-container { width: 900px;
+	margin-left: auto;
+	margin-right: auto; 
+	position: relative; 
+	/*background: pink;*/ }
+	
+#left-ops { position: absolute;
+	left: 0; }
+	
+#right-ops { position: absolute;
+	right: 0; }
+	
+	
+a.monthChange {/*cursor: hand;*/ cursor: pointer;}
+		
