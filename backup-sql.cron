@@ -1,0 +1,1 @@
+0 0 * * * mysqldump -u root -pchangeit txtbudget > /disk1/sqlbackup/txtbudget_$(date +\%Y-\%m-\%d).sql
